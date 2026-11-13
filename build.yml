@@ -8,6 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Arrange files
+        run: |
+          mkdir -p src/main/java/com/mendingz/client/gui src/main/java/com/mendingz/client/module src/main/resources
+          mv MendingzClient.java src/main/java/com/mendingz/client/
+          mv MendingzHud.java ClickGuiScreen.java src/main/java/com/mendingz/client/gui/
+          mv Module.java ModuleManager.java Setting.java src/main/java/com/mendingz/client/module/
+          mv fabric.mod.json src/main/resources/
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
