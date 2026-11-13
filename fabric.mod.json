@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "mendingz",
+  "version": "1.0.0",
+  "name": "Mendingz Client",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.mendingz.client.MendingzClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": "~1.21.11",
+    "fabric-api": "*"
+  }
+}
